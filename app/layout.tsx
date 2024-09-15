@@ -1,3 +1,6 @@
+import "@/app/ui/global.css";
+import { inter, noto_serif_jp, roboto_mono } from "@/app/ui/fonts";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${noto_serif_jp.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
